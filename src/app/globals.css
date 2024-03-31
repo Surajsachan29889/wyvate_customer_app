@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bottom-menu {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+   
+  }
+  .top-menu{
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  .no-scroll {
+    overflow: hidden;
+  }
+
+  .slick-slide > div{
+
+    margin: 0 10px;
+  
+  }
+
+  .slick-dots{
+
+margin-top: 0;
+padding: 0;
+
+  }
+
+
+  input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number]{
+  -moz-appearance: textfield;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+.overlay1 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: -20;
+  cursor: pointer;
+}
+
+.text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.example::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.example {
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+}
+
+
+.card-skeleton{
+  display: flex;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.card-skeleton .left-col{
+  margin-right: 1rem;
+}
+
+.card-skeleton .right-col{
+flex: 1}
+
+/* RippleButton.css */
+@keyframes ripple-animation {
+  to {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+.ripple-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple-button .ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple-animation 0.6s linear;
+  background: rgba(255, 255, 255, 0.7);
+  pointer-events: none;
+}
+
+.ripple-button.ripple-active .ripple {
+  transform: scale(3);
+  opacity: 0;
+}
